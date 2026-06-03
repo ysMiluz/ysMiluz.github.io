@@ -11,18 +11,25 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#content">跳到正文</a>
+    <a class="skip-link" href="#content" data-i18n="actions.skip">跳到正文</a>
 
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top" data-profile="name">你的姓名</a>
-        <nav class="main-nav" aria-label="主导航">
-          <a href="#about">关于</a>
-          <a href="#experience">经历</a>
-          <a href="#projects">项目</a>
-          <a href="#skills">技能</a>
-          <a href="#contact">联系</a>
-        </nav>
+        <div class="header-tools">
+          <nav class="main-nav" aria-label="主导航">
+            <a href="#about" data-i18n="nav.about">关于</a>
+            <a href="#experience" data-i18n="nav.experience">经历</a>
+            <a href="#projects" data-i18n="nav.projects">项目</a>
+            <a href="#publications" data-i18n="nav.publications">论文</a>
+            <a href="#skills" data-i18n="nav.skills">技能</a>
+            <a href="#contact" data-i18n="nav.contact">联系</a>
+          </nav>
+          <div class="language-toggle" aria-label="语言切换">
+            <button type="button" data-lang-button="zh" aria-pressed="true">中</button>
+            <button type="button" data-lang-button="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -46,21 +53,21 @@
 
         <div class="profile-actions">
           <a class="button button-primary" data-profile="emailLink" href="mailto:you@example.com">
-            发邮件
+            <span data-i18n="actions.email">发邮件</span>
           </a>
-          <a class="button button-secondary" href="#projects">看项目</a>
+          <a class="button button-secondary" href="#projects" data-i18n="actions.projects">看项目</a>
         </div>
 
         <section class="mini-section" id="contact">
-          <h2>联系</h2>
+          <h2 data-i18n="sections.contactTitle">联系</h2>
           <ul class="contact-list" data-list="links"></ul>
         </section>
       </aside>
 
       <div id="content" class="content-column">
         <section id="about" class="section-block intro-section">
-          <p class="section-kicker">About</p>
-          <h2>关于我</h2>
+          <p class="section-kicker" data-i18n="sections.aboutKicker">About</p>
+          <h2 data-i18n="sections.aboutTitle">关于我</h2>
           <div class="about-copy" data-list="about"></div>
           <dl class="metric-grid" data-list="highlights"></dl>
         </section>
@@ -68,8 +75,8 @@
         <section class="section-block">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Updates</p>
-              <h2>近期动态</h2>
+              <p class="section-kicker" data-i18n="sections.updatesKicker">Updates</p>
+              <h2 data-i18n="sections.updatesTitle">近期动态</h2>
             </div>
           </div>
           <ol class="news-list" data-list="updates"></ol>
@@ -78,8 +85,8 @@
         <section id="experience" class="section-block">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Experience</p>
-              <h2>经历</h2>
+              <p class="section-kicker" data-i18n="sections.experienceKicker">Experience</p>
+              <h2 data-i18n="sections.experienceTitle">经历</h2>
             </div>
           </div>
           <div class="timeline" data-list="experience"></div>
@@ -88,18 +95,28 @@
         <section id="projects" class="section-block">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Projects</p>
-              <h2>代表项目</h2>
+              <p class="section-kicker" data-i18n="sections.projectsKicker">Projects</p>
+              <h2 data-i18n="sections.projectsTitle">代表项目</h2>
             </div>
           </div>
           <div class="project-grid" data-list="projects"></div>
         </section>
 
+        <section id="publications" class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker" data-i18n="sections.publicationsKicker">Publications</p>
+              <h2 data-i18n="sections.publicationsTitle">论文</h2>
+            </div>
+          </div>
+          <ul class="publication-list" data-list="publications"></ul>
+        </section>
+
         <section id="skills" class="section-block">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Skills</p>
-              <h2>技能栈</h2>
+              <p class="section-kicker" data-i18n="sections.skillsKicker">Skills</p>
+              <h2 data-i18n="sections.skillsTitle">技能栈</h2>
             </div>
           </div>
           <div class="skill-grid" data-list="skills"></div>
@@ -108,8 +125,8 @@
         <section class="section-block">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Education</p>
-              <h2>教育与证书</h2>
+              <p class="section-kicker" data-i18n="sections.educationKicker">Education</p>
+              <h2 data-i18n="sections.educationTitle">教育与证书</h2>
             </div>
           </div>
           <div class="timeline compact" data-list="education"></div>

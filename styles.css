@@ -75,7 +75,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  width: min(100% - 32px, var(--content));
+  width: min(calc(100% - 32px), var(--content));
   min-height: 64px;
   margin: 0 auto;
 }
@@ -94,6 +94,13 @@ a:hover {
   white-space: nowrap;
 }
 
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
 .main-nav a {
   padding: 8px 10px;
   border-radius: var(--radius);
@@ -107,11 +114,43 @@ a:hover {
   color: var(--teal);
 }
 
+.language-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.language-toggle button {
+  min-width: 36px;
+  height: 32px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.language-toggle button:hover {
+  color: var(--teal);
+}
+
+.language-toggle button.is-active {
+  background: var(--blue);
+  color: #fff;
+}
+
 .page-shell {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 48px;
-  width: min(100% - 32px, var(--content));
+  width: min(calc(100% - 32px), var(--content));
   margin: 36px auto 0;
   align-items: start;
 }
@@ -121,6 +160,7 @@ a:hover {
   top: 92px;
   display: grid;
   gap: 22px;
+  min-width: 0;
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -141,6 +181,7 @@ a:hover {
 .profile-copy {
   display: grid;
   gap: 4px;
+  min-width: 0;
 }
 
 .eyebrow,
@@ -151,6 +192,7 @@ a:hover {
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .profile-copy h1 {
@@ -158,6 +200,7 @@ a:hover {
   color: var(--blue);
   font-size: 2rem;
   line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .role,
@@ -169,6 +212,7 @@ a:hover {
 .role {
   color: var(--ink);
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .tag-list {
@@ -180,6 +224,7 @@ a:hover {
 .tag {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   min-height: 30px;
   padding: 4px 9px;
   border: 1px solid rgba(25, 123, 120, 0.22);
@@ -188,6 +233,8 @@ a:hover {
   color: #0f5e5b;
   font-size: 0.86rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .profile-actions {
@@ -200,6 +247,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   min-height: 42px;
   padding: 8px 12px;
   border: 1px solid transparent;
@@ -207,6 +255,7 @@ a:hover {
   font-weight: 800;
   text-align: center;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .button-primary {
@@ -263,6 +312,12 @@ a:hover {
   font-size: 0.94rem;
 }
 
+.contact-list li > :last-child {
+  min-width: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
 .contact-list span {
   color: var(--ink);
   font-weight: 700;
@@ -301,6 +356,8 @@ a:hover {
   max-width: 780px;
   color: #33383f;
   font-size: 1.04rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .about-copy p {
@@ -409,11 +466,13 @@ a:hover {
 .project-card p {
   margin: 0;
   color: #3e454d;
+  overflow-wrap: anywhere;
 }
 
 .timeline-points,
 .project-tags,
-.skill-list {
+.skill-list,
+.publication-list {
   margin: 12px 0 0;
   padding: 0;
   list-style: none;
@@ -486,6 +545,29 @@ a:hover {
   font-weight: 800;
 }
 
+.publication-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 0;
+}
+
+.publication-list li {
+  position: relative;
+  padding-left: 20px;
+  color: #3e454d;
+}
+
+.publication-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.78em;
+  width: 7px;
+  height: 7px;
+  background: var(--teal);
+  transform: rotate(45deg);
+}
+
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -517,7 +599,7 @@ a:hover {
 }
 
 .site-footer {
-  width: min(100% - 32px, var(--content));
+  width: min(calc(100% - 32px), var(--content));
   margin: 36px auto 28px;
   color: var(--muted);
   font-size: 0.92rem;
@@ -553,23 +635,44 @@ a:hover {
 }
 
 @media (max-width: 680px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header-inner {
     display: grid;
     gap: 8px;
     padding: 10px 0;
+    max-width: 100%;
+  }
+
+  .header-tools {
+    display: grid;
+    gap: 8px;
+    max-width: 100%;
   }
 
   .main-nav {
     width: 100%;
   }
 
+  .language-toggle {
+    width: max-content;
+  }
+
   .page-shell {
-    width: min(100% - 24px, var(--content));
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
     margin-top: 20px;
+    overflow: hidden;
   }
 
   .profile-panel {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     padding: 14px;
   }
 
@@ -581,9 +684,28 @@ a:hover {
     grid-column: auto;
   }
 
+  .profile-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .tag-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tag {
+    width: fit-content;
+  }
+
   .profile-photo {
     grid-row: auto;
     max-width: 240px;
+  }
+
+  .contact-list li {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: start;
   }
 
   .intro-section h2,

@@ -6,9 +6,16 @@
 
 直接用浏览器打开 `index.html` 即可预览。
 
+页面支持中英文切换，也可以用查询参数直接打开指定语言：
+
+```text
+index.html?lang=zh
+index.html?lang=en
+```
+
 ## 修改内容
 
-主要修改 `profile.js`：
+主要修改 `profile.js` 中 `resumeContent.zh` 和 `resumeContent.en` 两组数据：
 
 - `name`：姓名
 - `role`：职业方向
