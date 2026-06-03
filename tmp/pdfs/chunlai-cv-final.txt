@@ -1,0 +1,57 @@
+                                                Chunlai Long
+                          longchunlai@lsec.cc.ac.cn | 133-3103-1854 | website | GitHub
+
+Education
+Academy of Mathematics and Systems Science, Chinese Academy of Sciences
+ • Ph.D. in Computational Mathematics                                                        2021.09 - 2026.07 (exp.)
+ • GPA: 3.73. Coursework: optimization methods, partial differential equations, numerical solutions of differential
+   equations, finite element methods, convex analysis, numerical linear algebra, numerical approximation, stochastic
+   differential equations, parallel computing, inverse problems.
+Shihezi University
+ • B.S. in Mathematics and Applied Mathematics                                                     2017.09 - 2021.06
+ • GPA: 3.68. Coursework: mathematical analysis, advanced algebra, analytic geometry, abstract algebra, probability
+   and statistics, ordinary differential equations, complex analysis, real analysis, numerical methods, mathematical
+   modeling.
+
+Work Experience
+Strategy Algorithm Intern, @Baidu Mobile Ecosystem Data R&D Department                           2025.09 - 2025.12
+  • Studied Google DeepMind’s AlphaEvolve program-evolution framework, including Program Database, LLM Ensemble,
+    Prompt Sampler, and Evaluator Pool.
+  • Applied the framework to domain anomaly detection and phishing-site identification; optimized detection models
+    on full-site data and achieved 98% precision in domain anomaly detection.
+
+Research Experience
+Multiscale Algorithms for Electromagnetic Models                                                2020.01 - 2024.01
+  • Developed HOMO-FDTD for electromagnetic scattering in periodic composites and periodic structures, coupling
+    unit-cell homogenization with time-domain FDTD.
+  • Reduced grid size and computational cost while preserving physical consistency, making the method suitable for
+    parameter-sensitivity analysis, structural optimization, and large-scale simulations.
+Electromagnetic Wave Propagation in Plasma Sheaths                                               2024.04 - present
+  • Analyzed Maxwell-Drude and Maxwell-Lorentz coupled systems in dispersive media, focusing on ADE-FDTD
+    schemes with strict stability and convergence requirements.
+  • Proved temporal-spatial second-order convergence for three ADE-FDTD schemes under regularity assumptions,
+    deriving error estimates and practical criteria for reliable simulations.
+
+Technical Skills
+  • Programming and HPC: C/C++, Python, Linux, MPI, CUDA kernel programming, warp-level parallelism, shared
+    memory management, Grid-Stride Loop.
+  • Numerical libraries: LAPACK/ScaLAPACK, PETSc, BLACS process grids, ScaLAPACK descriptors, DGEQRF,
+    PDGESV, INFO error codes, LWORK/TSIZE workspace queries.
+  • Numerical algorithms: finite element methods, FDTD, ADE-FDTD, homogenization methods, numerical linear
+    algebra, convergence analysis.
+  • GPU optimization: Flash Attention optimization strategies, tiling, register blocking, warp-specialization, streaming
+    and ping-pong scheduling.
+
+Research Publications
+  • Convergence Analysis of CPDIM1 Scheme for Maxwell-Drude Model. In prep, 2025.
+  • Convergence Analysis of CPDIM3 Scheme for Maxwell-Drude Model. In prep, 2025.
+  • Convergence Analysis of L-DIM1 Scheme for Maxwell-Lorentz Model. In prep, 2025.
+  • Multiscale Electromagnetic Scattering Simulation via HOMO-FDTD: Coupling Unit-Cell Homogenization
+    with Time-Domain FDTD. In prep, 2025.
+
+Awards and Certificates
+  • First Prize, 11th National College Student Mathematics Competition, Mathematics B category.
+  • First Prize, 12th National College Student Mathematics Competition, Mathematics B category.
+  • University-level First Prize in Mathematical Modeling Competition; university scholarship.
+  • CET-4, CET-6, and Teacher Qualification Certificate.
+

@@ -1,0 +1,54 @@
+                                  Hsiu-Hsuan Wang                    ​          ​
+                           r13921059@ntu.edu.tw | website | Google Scholar
+ Education
+ National Taiwan University ​​      ​     ​      ​     ​         ​
+  -​ M.S. Electrical Engineering, Computer Science ​   ​         ​            2024.09 - 2026.06 (exp.)​
+      supervised by Prof. Hung-Yi Lee
+  -​ B.S. Computer Science and Information Engineering        2020.09 - 2024.06 | overall GPA: 4.07/4.3​
+      supervised by Prof. Hsuan-Tien Lin
+
+ Work Experiences
+ Research Intern, @Taiwan Web Service, ASUS ​             ​      ​               2024.6 - 2025.06 (1yr)
+    ●​ Developed the first Mandarin full-duplex spoken language model for real-time speech-to-speech
+       conversation, achieving near-human response latency of 300ms.
+    ●​ Designed an optimized preprocessing pipeline, achieving near 100% GPU utilization across 8
+       NVIDIA H100 GPUs to process 6TB of raw audio data within 24 hours.
+
+ Chief Technology Officer, @Mygram AI Inc.​         ​          ​   ​     2023.08 - present (1yr 2 mos)
+    ●​ Led the development of a full-stack AI dating app, leading a seven-member team to launch the
+        app on the App Store in six months.
+
+ Head of Network Administration, @Speech Processing Lab, NTU​            2024.12 - present (4 mos)
+    ●​ Maintained a cluster of five compute nodes with over 20 GPUs, managed with Slurm.
+
+ Machine Learning Engineer, @LTTC x ASUS​          ​              ​​         2024.06 - 2024.10 (4 mos)
+   ●​ Designed and deployed a production-ready, GPU-powered judging server.
+   ●​ Built a scalable backend infrastructure using Docker containers and Flask server, supporting
+       seamlessly across 1 to 20 concurrent clients with a stable response time.
+
+ Open Source Contribution
+ ESPnet Hackathon, ​        ​      ​       ​      ​      ​        ​         2024.06 - 2024.12 (6 mos)
+    ●​ Reduced 85% training time with only ~2% CER degradation on speech unit ASR pipelines built
+       upon the large ESPnet Python codebase.
+ libcll: First open source Toolkit for Complementary Label Learning 2023.10 - 2024.01 (3 mos)
+    ●​ Implement 16 algorithms and 11 datasets (2 real-world ones) with extendable designs and
+       benchmark for complementary label learning research. (repo link)
+
+ Research Publications                                                         Full list: Google Scholar
+
+-​   Building Taiwanese Mandarin Spoken Language Model: A First Attempt. Technical Report
+-​   Exploring speech recognition, translation, and understanding with discrete speech units: A
+     comparative study. Accepted by Icassp 2024
+-​   Codec-SUPERB: An In-Depth Analysis of Sound Codec Models. Accepted to ACL 2024​
+-​   Findings of the 2023 ML-Superb Challenge: Pre-Training And Evaluation Over More Languages
+     And Beyond. Accepted by ASRU 2023
+
+ Academic Projects
+ Speech Crawling with Meta ​         ​       ​       2022.10 - 2023.08 & 2024.02 - present (1yr 6 mos)
+    ●​ Designed a parallel pipeline to run speaker language detection of 200k hours of audio data
+       (40TB) within 48 hours.
+
+ Awards
+ 2023 Honorable Mention Undergraduate Project Award
+ 2022 Excellent Teaching Assistant Award for course Data Structure and Algorithm, NTU
+
