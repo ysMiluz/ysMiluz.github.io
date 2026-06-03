@@ -14,6 +14,10 @@ const resumeContent = {
       navLabel: "主导航",
       profileLabel: "个人资料",
       languageLabel: "语言切换",
+      siteLinks: {
+        cv: "CV",
+        blog: "Blog",
+      },
       actions: {
         skip: "跳到正文",
         email: "发邮件",
@@ -39,6 +43,8 @@ const resumeContent = {
         projectsTitle: "代表项目",
         publicationsKicker: "Publications",
         publicationsTitle: "论文",
+        blogKicker: "Blog",
+        blogTitle: "博客",
         skillsKicker: "Skills",
         skillsTitle: "技能栈",
         educationKicker: "Education",
@@ -128,6 +134,18 @@ const resumeContent = {
       "Convergence Analysis of L-DIM1 Scheme for Maxwell-Lorentz Model, In prep, 2025",
       "Multiscale Electromagnetic Scattering Simulation via HOMO-FDTD: Coupling Unit-Cell Homogenization with Time-Domain FDTD, In prep, 2025",
     ],
+    blog: [
+      {
+        date: "Research Notes",
+        title: "FDTD 与 ADE-FDTD 学习笔记",
+        summary: "记录 Maxwell-Drude、Maxwell-Lorentz、色散介质电磁传播和时空收敛性分析相关笔记。",
+      },
+      {
+        date: "HPC Notes",
+        title: "数值计算库与并行计算",
+        summary: "整理 LAPACK/ScaLAPACK、PETSc、BLACS、MPI 以及 GPU 优化相关实践经验。",
+      },
+    ],
     skills: [
       {
         group: "GPU 优化",
@@ -183,6 +201,10 @@ const resumeContent = {
       navLabel: "Main navigation",
       profileLabel: "Profile",
       languageLabel: "Language switcher",
+      siteLinks: {
+        cv: "CV",
+        blog: "Blog",
+      },
       actions: {
         skip: "Skip to content",
         email: "Email me",
@@ -208,6 +230,8 @@ const resumeContent = {
         projectsTitle: "Selected Projects",
         publicationsKicker: "Publications",
         publicationsTitle: "Publications",
+        blogKicker: "Blog",
+        blogTitle: "Blog",
         skillsKicker: "Skills",
         skillsTitle: "Technical Skills",
         educationKicker: "Education",
@@ -297,6 +321,18 @@ const resumeContent = {
       "Convergence Analysis of L-DIM1 Scheme for Maxwell-Lorentz Model, In prep, 2025",
       "Multiscale Electromagnetic Scattering Simulation via HOMO-FDTD: Coupling Unit-Cell Homogenization with Time-Domain FDTD, In prep, 2025",
     ],
+    blog: [
+      {
+        date: "Research Notes",
+        title: "Notes on FDTD and ADE-FDTD",
+        summary: "Notes on Maxwell-Drude, Maxwell-Lorentz, electromagnetic propagation in dispersive media, and temporal-spatial convergence analysis.",
+      },
+      {
+        date: "HPC Notes",
+        title: "Numerical Libraries and Parallel Computing",
+        summary: "Working notes on LAPACK/ScaLAPACK, PETSc, BLACS, MPI, and GPU optimization practices.",
+      },
+    ],
     skills: [
       {
         group: "GPU Optimization",
@@ -358,7 +394,7 @@ function setStaticText(resume) {
     }
   });
 
-  q(".main-nav")?.setAttribute("aria-label", resume.ui.navLabel);
+  q(".site-nav")?.setAttribute("aria-label", resume.ui.navLabel);
   q(".profile-panel")?.setAttribute("aria-label", resume.ui.profileLabel);
   q(".language-toggle")?.setAttribute("aria-label", resume.ui.languageLabel);
   q(".profile-photo")?.setAttribute("alt", resume.photoAlt);
@@ -478,6 +514,20 @@ function renderPublications(target, items) {
   target.innerHTML = items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 }
 
+function renderBlog(target, items) {
+  target.innerHTML = items
+    .map(
+      (item) => `
+        <article class="blog-card">
+          <p>${escapeHtml(item.date)}</p>
+          <h3>${escapeHtml(item.title)}</h3>
+          <span>${escapeHtml(item.summary)}</span>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function renderSkills(target, groups) {
   target.innerHTML = groups
     .map(
@@ -560,6 +610,7 @@ function renderResume() {
   renderTimeline(q('[data-list="experience"]'), resume.experience);
   renderProjects(q('[data-list="projects"]'), resume.projects, resume.ui.projectLink);
   renderPublications(q('[data-list="publications"]'), resume.publications);
+  renderBlog(q('[data-list="blog"]'), resume.blog);
   renderSkills(q('[data-list="skills"]'), resume.skills);
   renderTimeline(q('[data-list="education"]'), resume.education);
 }

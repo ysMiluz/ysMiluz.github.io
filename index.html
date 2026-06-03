@@ -17,13 +17,9 @@
       <div class="header-inner">
         <a class="brand" href="#top" data-profile="name">你的姓名</a>
         <div class="header-tools">
-          <nav class="main-nav" aria-label="主导航">
-            <a href="#about" data-i18n="nav.about">关于</a>
-            <a href="#experience" data-i18n="nav.experience">经历</a>
-            <a href="#projects" data-i18n="nav.projects">项目</a>
-            <a href="#publications" data-i18n="nav.publications">论文</a>
-            <a href="#skills" data-i18n="nav.skills">技能</a>
-            <a href="#contact" data-i18n="nav.contact">联系</a>
+          <nav class="site-nav" aria-label="主导航">
+            <a href="#cv" data-i18n="siteLinks.cv">CV</a>
+            <a href="#blog" data-i18n="siteLinks.blog">Blog</a>
           </nav>
           <div class="language-toggle" aria-label="语言切换">
             <button type="button" data-lang-button="zh" aria-pressed="true">中</button>
@@ -65,7 +61,7 @@
       </aside>
 
       <div id="content" class="content-column">
-        <section id="about" class="section-block intro-section">
+        <section id="cv" class="section-block intro-section">
           <p class="section-kicker" data-i18n="sections.aboutKicker">About</p>
           <h2 data-i18n="sections.aboutTitle">关于我</h2>
           <div class="about-copy" data-list="about"></div>
@@ -110,6 +106,16 @@
             </div>
           </div>
           <ul class="publication-list" data-list="publications"></ul>
+        </section>
+
+        <section id="blog" class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker" data-i18n="sections.blogKicker">Blog</p>
+              <h2 data-i18n="sections.blogTitle">博客</h2>
+            </div>
+          </div>
+          <div class="blog-list" data-list="blog"></div>
         </section>
 
         <section id="skills" class="section-block">
