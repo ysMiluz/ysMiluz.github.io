@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="个人简历网页，展示个人简介、经历、项目、技能与联系方式。"
+    />
+    <title>个人简历 | Resume</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">跳到正文</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" data-profile="name">你的姓名</a>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="#about">关于</a>
+          <a href="#experience">经历</a>
+          <a href="#projects">项目</a>
+          <a href="#skills">技能</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <aside class="profile-panel" aria-label="个人资料">
+        <img
+          class="profile-photo"
+          src="./assets/profile-visual.png"
+          alt="职业风格个人主页插图"
+          width="320"
+          height="320"
+        />
+        <div class="profile-copy">
+          <p class="eyebrow" data-profile="availability">正在寻找新的机会</p>
+          <h1 data-profile="name">你的姓名</h1>
+          <p class="role" data-profile="role">你的职业方向 / 当前身份</p>
+          <p class="location" data-profile="location">中国 · 城市</p>
+        </div>
+
+        <div class="tag-list" data-list="focus"></div>
+
+        <div class="profile-actions">
+          <a class="button button-primary" data-profile="emailLink" href="mailto:you@example.com">
+            发邮件
+          </a>
+          <a class="button button-secondary" href="#projects">看项目</a>
+        </div>
+
+        <section class="mini-section" id="contact">
+          <h2>联系</h2>
+          <ul class="contact-list" data-list="links"></ul>
+        </section>
+      </aside>
+
+      <div id="content" class="content-column">
+        <section id="about" class="section-block intro-section">
+          <p class="section-kicker">About</p>
+          <h2>关于我</h2>
+          <div class="about-copy" data-list="about"></div>
+          <dl class="metric-grid" data-list="highlights"></dl>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Updates</p>
+              <h2>近期动态</h2>
+            </div>
+          </div>
+          <ol class="news-list" data-list="updates"></ol>
+        </section>
+
+        <section id="experience" class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Experience</p>
+              <h2>经历</h2>
+            </div>
+          </div>
+          <div class="timeline" data-list="experience"></div>
+        </section>
+
+        <section id="projects" class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Projects</p>
+              <h2>代表项目</h2>
+            </div>
+          </div>
+          <div class="project-grid" data-list="projects"></div>
+        </section>
+
+        <section id="skills" class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Skills</p>
+              <h2>技能栈</h2>
+            </div>
+          </div>
+          <div class="skill-grid" data-list="skills"></div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Education</p>
+              <h2>教育与证书</h2>
+            </div>
+          </div>
+          <div class="timeline compact" data-list="education"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <span data-profile="name">你的姓名</span>
+        <span aria-hidden="true"> · </span>
+        <span data-profile="footer">个人简历网页</span>
+      </p>
+    </footer>
+
+    <script src="./profile.js"></script>
+  </body>
+</html>
