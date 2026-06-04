@@ -8,7 +8,7 @@ const resumeContent = {
     location: "北京 · 海淀",
     availability: "中国科学院数学与系统科学研究院 · 计算数学",
     footer: "最后更新：2026",
-    email: "longchunlai@lsec.cc.ac.cn",
+    email: "2660154481@qq.com",
     focus: ["计算数学", "电磁散射", "FDTD / ADE-FDTD", "高性能计算"],
     ui: {
       navLabel: "主导航",
@@ -53,8 +53,7 @@ const resumeContent = {
       projectLink: "查看项目",
     },
     links: [
-      { label: "电话", text: "133-3103-1854", href: "tel:13331031854" },
-      { label: "邮箱", text: "longchunlai@lsec.cc.ac.cn", href: "mailto:longchunlai@lsec.cc.ac.cn" },
+      { label: "邮箱", text: "2660154481@qq.com", href: "mailto:2660154481@qq.com" },
       { label: "GitHub", text: "github.com/ysMiluz", href: "https://github.com/ysMiluz" },
       { label: "城市", text: "北京 · 海淀", href: "" },
     ],
@@ -195,7 +194,7 @@ const resumeContent = {
     location: "Haidian, Beijing",
     availability: "Academy of Mathematics and Systems Science, CAS",
     footer: "Last updated: 2026",
-    email: "longchunlai@lsec.cc.ac.cn",
+    email: "2660154481@qq.com",
     focus: ["Computational Mathematics", "Electromagnetic Scattering", "FDTD / ADE-FDTD", "High-Performance Computing"],
     ui: {
       navLabel: "Main navigation",
@@ -240,8 +239,7 @@ const resumeContent = {
       projectLink: "View project",
     },
     links: [
-      { label: "Phone", text: "133-3103-1854", href: "tel:13331031854" },
-      { label: "Email", text: "longchunlai@lsec.cc.ac.cn", href: "mailto:longchunlai@lsec.cc.ac.cn" },
+      { label: "Email", text: "2660154481@qq.com", href: "mailto:2660154481@qq.com" },
       { label: "GitHub", text: "github.com/ysMiluz", href: "https://github.com/ysMiluz" },
       { label: "Location", text: "Haidian, Beijing", href: "" },
     ],
