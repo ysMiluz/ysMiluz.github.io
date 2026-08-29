@@ -1,0 +1,114 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,top=0.42in,bottom=0.42in,left=0.53in,right=0.53in]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\setmainfont{Arial}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+
+\definecolor{accent}{HTML}{183B56}
+\definecolor{muted}{HTML}{5F6872}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Chunlai Long},
+  pdftitle={Chunlai Long - Curriculum Vitae},
+  pdfsubject={Multimodal machine learning, numerical algorithms, and high-performance computing}
+}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{-0.42em}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{0.44em}{0.22em}
+
+\setlist[itemize]{
+  leftmargin=1.18em,
+  itemsep=0.08em,
+  topsep=0.10em,
+  parsep=0pt,
+  partopsep=0pt,
+  label={\color{accent}\textbullet}
+}
+
+\newcommand{\entry}[3]{%
+  \textbf{#1}\hfill{\color{muted}\textit{#2}}\\[-0.22em]
+  {\color{muted}\small #3}\par
+}
+
+\newcommand{\project}[2]{%
+  \textbf{#1}\hfill{\color{muted}\textit{#2}}\par
+}
+
+\begin{document}
+\fontsize{10.5}{12.6}\selectfont
+\begin{center}
+  {\fontsize{22}{24}\selectfont\bfseries Chunlai Long}\\[0.12em]
+  {\color{accent}\bfseries Multimodal Machine Learning \textbar{} Numerical Algorithms \textbar{} HPC}\\[0.16em]
+  \href{mailto:2660154481@qq.com}{2660154481@qq.com}
+  \quad\textbar\quad
+  \href{https://ysmiluz.github.io}{ysmiluz.github.io}
+  \quad\textbar\quad
+  \href{https://github.com/ysMiluz}{github.com/ysMiluz}
+\end{center}
+\vspace{-0.62em}
+
+\section{Experience}
+
+\entry{Algorithm R\&D - Multimodal Learning and Training Engineering}{2026.04 - Present}{sEMG hand-pose estimation; FM\_PULSE, vEMG2Pose Benchmark, SHM, and Fusion2Pose}
+\begin{itemize}
+  \item Rebuilt training and real-time inference into a configurable Python/Hydra/CLI platform, supporting force, pose, and gesture multitask learning, uncertainty-weighted losses, reproducible experiments, and modular ONNX inference.
+  \item Diagnosed and corrected a hidden 0.7-1.5 s EMG-Manus timing offset and cross-day clock-domain failures; validated the pipeline across about 850 raw NPZ files, safely isolating one physically corrupted file.
+  \item Established controlled GT A/B, tracking-vs-regression, cross-subject, and cross-device evaluation protocols; achieved 16.54° v1.0 regression test MAE and delivered SHM training, evaluation, checkpoint, and two-stage ONNX workflows.
+  \item Built a 34,163-sample, three-seed training pipeline with real-batch preflight, GPU queuing, checkpoint/resume, and S3 Range GET diagnostics; isolated shared-cache failures instead of misclassifying source objects as corrupt.
+  \item Designed two causal bilateral Vision+sEMG+IMU architectures and processed 368 videos (23.6 h, 2.53M frames) with sequential decoding and FP16 feature caching; Pose-State Query reached 22.62° current test MAE, 2.78° below Chord-MulT, with 90+ contract and integration tests.
+\end{itemize}
+
+\entry{Strategy Algorithm Intern, Baidu Mobile Ecosystem Data R\&D}{2025.09 - 2025.12}{Data Strategy Group}
+\begin{itemize}
+  \item Applied an AlphaEvolve-style program-evolution framework to domain anomaly detection and phishing-site identification, covering program databases, LLM ensembles, prompt sampling, and evaluator pools.
+  \item Optimized detection models on full-site data and achieved 98\% precision in domain anomaly detection.
+\end{itemize}
+
+\section{Selected Research}
+
+\project{Multiscale Algorithms for Electromagnetic Models}{2020.01 - 2024.01}
+\begin{itemize}
+  \item Developed HOMO-FDTD for periodic electromagnetic structures by coupling unit-cell homogenization with time-domain FDTD, reducing grid and compute requirements while preserving physical consistency.
+\end{itemize}
+
+\project{Electromagnetic Wave Propagation in Plasma Sheaths}{2024.04 - Present}
+\begin{itemize}
+  \item Proved temporal-spatial second-order convergence for three ADE-FDTD schemes under Maxwell-Drude and Maxwell-Lorentz models, deriving error estimates and practical stability criteria.
+\end{itemize}
+
+\section{Education}
+
+\entry{Academy of Mathematics and Systems Science, Chinese Academy of Sciences}{2021.09 - 2026.07}{Ph.D. Candidate in Computational Mathematics \textbar{} GPA: 3.73}
+\vspace{0.10em}
+\entry{Shihezi University}{2017.09 - 2021.06}{B.S. in Mathematics and Applied Mathematics \textbar{} GPA: 3.68}
+
+\section{Technical Skills}
+
+\begin{itemize}
+  \item \textbf{Machine learning:} TDS/TCN, Transformers, cross-attention, causal masking, multimodal fusion, uncertainty modeling, kinematic FK, multitask learning, Hydra, ONNX.
+  \item \textbf{Engineering and HPC:} Python, C/C++, Linux, CUDA, MPI, mmap, S3 data pipelines, checkpoint/resume, multi-seed training, GPU scheduling, unit/contract/integration testing.
+  \item \textbf{Numerical computing:} FDTD/ADE-FDTD, finite elements, homogenization, numerical linear algebra, convergence analysis, LAPACK/ScaLAPACK, PETSc, BLACS.
+\end{itemize}
+
+\section{Publications and Awards}
+
+\begin{itemize}
+  \item Four manuscripts in preparation on CPDIM/L-DIM convergence for Maxwell-Drude/Maxwell-Lorentz systems and multiscale HOMO-FDTD simulation.
+  \item First Prize, 11th and 12th National College Student Mathematics Competition (Mathematics B); university-level First Prize in Mathematical Modeling; university scholarship; CET-4/CET-6; Teacher Qualification Certificate.
+\end{itemize}
+
+\end{document}
